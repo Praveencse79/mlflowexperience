@@ -75,8 +75,8 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
 
-        #predictions = lr.predict(train_x)
-        #signature = infer_signature(train_x, predictions)
+        predictions = lr.predict(train_x)
+        signature = infer_signature(train_x, predictions)
 
         ## For Remote server only(DAGShub)
 
@@ -90,9 +90,10 @@ if __name__ == "__main__":
             # Register the model
             # There are other ways to use the Model Registry, which depends on the use case,
             # please refer to the doc for more information:
-            # https://mlflow.org/docs/latest/model-registry.html#api-workflow
+            # https://mlflow.org/docs/latest/model-registry.html api-workflow
             mlflow.sklearn.log_model(
-                lr, "model", registered_model_name="ElasticnetWineModel"
+                lr, "model", registered_model_name="ElasticnetWineModel" ,
             )
         else:
-            mlflow.sklearn.log_model(lr, "model")
+            mlflow.sklearn.log_model(lr, "model",)
+ 
