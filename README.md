@@ -27,3 +27,5 @@ prave@DESKTOP-6NEVEKQ MINGW64 /d/MLFLOW & DAGSHUB/mlflowexperience (main)
 $ export MLFLOW_TRACKING_PASSWORD=721322a1417c068480c604b1c1480bc5a9094320
 
 prave@DESKTOP-6NEVEKQ MINGW64 /d/MLFLOW & DAGSHUB/mlflowexperience (main)
+
+How to create mlruns? When we run the app.py file.
